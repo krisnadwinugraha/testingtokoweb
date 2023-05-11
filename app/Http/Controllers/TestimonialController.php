@@ -65,7 +65,6 @@ class TestimonialController extends Controller
         } catch (ModelNotFoundException $exception) {
             return response()->json(['error' => 'Data Tidak Ada.'], Response::HTTP_NOT_FOUND);  
         } catch (\Exception $exception) {
-            // Handle other exceptions if necessary
             return response()->json(['error' => 'Something went wrong.'], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
